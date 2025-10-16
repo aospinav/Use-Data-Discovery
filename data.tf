@@ -24,7 +24,7 @@ data "aws_security_group" "id_sg" {
     values = [var.security_group_name]
   }
 
-  vpc_id = data.aws_vpc.id_vpc
+  vpc_id = data.aws_vpc.id_vpc.id
 }
 
 data "aws_ami" "amazon_linux_2023" {
